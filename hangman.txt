@@ -1,0 +1,22 @@
+hangman:
+(when I looked something up for help / used ai)
+
+".txt in python"
+it gave me a long example, probably shouldn't put that all in here
+
+
+".isalpha in python"
+1. No spaces or numbers allowed — only letters
+2. Works with Unicode alphabets (not just English)
+3. Empty strings always return False
+
+"turning the gallows into a line of code"
+0 strike: print("_______\n\n|/ |\n\n|\n\n|\n\n|\n\n|\n\n|\n\n_|___")
+1 strike: print("_______\n|/      |\n|      (_)\n|\n|\n|\n|\n_|___")
+2 strike: print("_______\n|/      |\n|      (_)\n|       |\n|       |\n|\n|\n_|___")
+3 strike: print("_______\n|/      |\n|      (_)\n|      \\|\n|       |\n|\n|\n_|___")
+4 strike: print("_______\n|/      |\n|      (_)\n|      \\|/\n|       |\n|\n|\n_|___")
+5 strike: print("_______\n|/      |\n|      (_)\n|      \\|/\n|       |\n|      /\n|\n_|___")
+6 strike: print("_______\n|/      |\n|      (_)\n|      \\|/\n|       |\n|      / \\\n|\n_|___")
+(had to fix the spacing of all of these still... not very fun)
+

@@ -23,6 +23,7 @@ def gameplay():
     
     """Contains the game itself"""
     print("Welcome to Hangman!")
+    gallow_stages(strikes)
     while strikes < max_strikes:
         display_word = ' '.join([letter if letter in guessed_letters else '_' for letter in chosen_word])
         print(f"\nWord: {display_word}")
@@ -42,6 +43,24 @@ def gameplay():
             break
     else:
         print(f"\nGame over. The word was: {chosen_word}")
+
+
+def gallow_stages(strikes):
+    """gallows stages (display)"""
+    if strikes == 0:
+        print("  _______\n |/      |\n |\n |\n |\n |\n |\n |\n_|___")
+    elif strikes == 1:
+        print("  _______\n |/      |\n |      (_)\n |\n |\n |\n |\n_|___")
+    elif strikes == 2:
+        print("  _______\n |/      |\n |      (_)\n |       |\n |       |\n |\n |\n_|___")
+    elif strikes == 3:
+        print("  _______\n |/      |\n |      (_)\n |      \\|\n |       |\n |\n |\n_|___")
+    elif strikes == 4:
+        print("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |\n |\n_|___")
+    elif strikes == 5:
+        print("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |       /\n |\n_|___")
+    elif strikes == 6:
+        print("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \\\n |\n_|___")
 
 
 def load_words(filename):
