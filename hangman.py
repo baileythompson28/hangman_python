@@ -25,14 +25,15 @@ def gameplay():
     print("Welcome to Hangman!")
     gallow_stages(strikes)
     while strikes < max_strikes:
-        display_word = ' '.join([letter if letter in guessed_letters else '_' for letter in chosen_word])
+        display_word = ' '.join([letter if letter in guessed_letters 
+                                 else '_' for letter in chosen_word])
         print(f"\nWord: {display_word}")
         guess = input("Guess a letter: ").strip().lower()
         if len(guess) != 1 or not guess.isalpha():
-            print("Enter a single character")
+            print("Enter a single character of the alphabet")
             continue
         if guess in guessed_letters:
-            print("Already guessed that letter. Try again.")
+            print("Already guessed")
             continue
         guessed_letters.add(guess)
         if guess not in chosen_word:
@@ -78,7 +79,7 @@ def play_again():
         if replay_input in ['yes', 'y']:
             gameplay()
         elif replay_input in ['no', 'n']:
-            print("Thanks for playing...")
+            print("Thanks for playing")
             break
         else:
             print("Invalid response. Enter 'y' or 'n'")
