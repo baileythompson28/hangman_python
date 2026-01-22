@@ -23,8 +23,8 @@ def gameplay():
     
     """Contains the game itself"""
     print("Welcome to Hangman!")
-    gallow_stages(strikes)
     while strikes < max_strikes:
+        gallow_stages(strikes)
         display_word = ' '.join([letter if letter in guessed_letters 
                                  else '_' for letter in chosen_word])
         print(f"\nWord: {display_word}")
